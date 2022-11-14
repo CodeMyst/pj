@@ -1,3 +1,5 @@
+module V02 where
+
 -- flatten an int list of lists
 
 flatten :: [[Int]] -> [Int]
