@@ -52,7 +52,7 @@ data Naselje =
 
 izdvoj :: [Naselje] -> [Naselje]
 izdvoj [] = []
-izdvoj (x:_) = [x | (jeSelo x && zbijeno x == "razbijeno") || (jeGrad x && imaBazen x && populacija x >= 150000)]
+izdvoj l = [x | x <- l, (jeSelo x && zbijeno x == "razbijeno") || (jeGrad x && imaBazen x && populacija x >= 150000)]
     where
         jeSelo (Selo {}) = True
         jeSelo _         = False
