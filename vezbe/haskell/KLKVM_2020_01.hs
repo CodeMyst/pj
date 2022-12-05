@@ -81,5 +81,7 @@ ukupniKapacitet l = sum $ map kapacitet l
     ((Double, Double), Int) koji predstavljaju (tacku, broj klastera)
 -}
 
--- TODO
+type Tacka = (Double, Double)
+
+-- klasteruj :: [Tacka] -> Int -> ((Double, Double), Int)
 
