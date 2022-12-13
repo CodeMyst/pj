@@ -21,7 +21,7 @@ object V06 {
 
   def flatten(xs: List[List[Any]]): List[Any] = xs.reduce(_ ++ _)
 
-  def sums(xs: List[List[Int]]): List[Int] = xs.map(x => if (x == Nil) List(0) else x).map(_.reduce(_ + _))
+  def sums(xs: List[List[Int]]): List[Int] = xs.map(x => if (x == Nil) List(0) else x).map(_.sum)
 
   def removeEven(xs: List[List[Int]]): List[List[Int]] = xs.map(_.filter(_ % 2 != 0)).filter(_ != Nil)
 

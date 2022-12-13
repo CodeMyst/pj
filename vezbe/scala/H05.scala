@@ -28,18 +28,18 @@ object H05 {
   /**
     * Return all pairs of an array. 
     */
-  def allPairs(elems: Array[Int]): Array[Tuple2[Int, Int]] = {
+  def allPairs(elems: Array[Int]): Array[(Int, Int)] = {
     for (x <- elems; y <- elems) yield (x, y)
   }
 
   /**
     * Returns all pairs whose average is between the specified range. 
     */
-  def avgWithinRange(pairs: Array[Tuple2[Int, Int]], lower: Int, higher: Int): Array[Tuple2[Int, Int]] = {
+  def avgWithinRange(pairs: Array[(Int, Int)], lower: Int, higher: Int): Array[(Int, Int)] = {
     pairs.filter(p => pairAvg(p) >= lower && pairAvg(p) <= higher)
   }
 
-  def pairAvg(pair: Tuple2[Int, Int]): Float = {
+  def pairAvg(pair: (Int, Int)): Float = {
     (pair._1 + pair._2).toFloat / 2f
   }
 

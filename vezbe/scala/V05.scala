@@ -81,18 +81,18 @@ object V05 {
     * Checks if the provided var is a numeric type.
     */
   def isNumeric(a: Any): Boolean = a match {
-    case x: Int    => true
-    case x: Short  => true
-    case x: Long   => true
-    case x: Float  => true
-    case x: Double => true
+    case _: Int    => true
+    case _: Short  => true
+    case _: Long   => true
+    case _: Float  => true
+    case _: Double => true
     case _        => false
   }
 
   /**
     * Create a new tuple, first element multiplied by `n`, and second element added to `n`. 
     */
-  def tuplez(a: Tuple2[Int, Int], n: Int): Tuple2[Int, Int] = (a._1 * n, a._2 + n)
+  def tuplez(a: (Int, Int), n: Int): (Int, Int) = (a._1 * n, a._2 + n)
 
   /**
     * Flattens a list. 
