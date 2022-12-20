@@ -25,12 +25,12 @@ object V07 {
 
   private def satellitesOrbitingAround(satellites: List[Satellite], planet: String): List[Satellite] = satellites.filter(_.orbitsAround.equals(planet))
 
-  private def filterz(bodies: List[CelestialBody]): List[CelestialBody] = bodies.filter({
+  private def filterz(bodies: List[CelestialBody]): List[CelestialBody] = bodies.filter(
     _ match {
       case p: Planet => p.hasWater && p.radius >= 5500
       case s: Satellite => s.radius >= 1000
     }
-  })
+  )
 }
 
 abstract class School(val name: String, val students: Int)
